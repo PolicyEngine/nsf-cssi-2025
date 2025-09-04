@@ -1,0 +1,46 @@
+name: Site CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Install Node dependencies
+        run: npm ci
+        working-directory: ./site
+
+      - name: Sync content from docs to site
+        run: python3 scripts/assemble_cssi_application.py
+
+      - name: Build site
+        run: npm run build
+        working-directory: ./site
+
+      - name: Check build artifacts
+        run: |
+          ls -la site/dist/
+          echo "Build completed successfully"
