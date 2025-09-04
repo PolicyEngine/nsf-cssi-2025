@@ -1,5 +1,9 @@
 # NSF CSSI Elements — PolicyEngine Cyberinfrastructure
 
+[![Site Deployment](https://github.com/PolicyEngine/nsf-cssi-2025/actions/workflows/site-deploy.yml/badge.svg)](https://github.com/PolicyEngine/nsf-cssi-2025/actions/workflows/site-deploy.yml)
+
+**Live Proposal Site**: [https://policyengine.github.io/nsf-cssi-2025/](https://policyengine.github.io/nsf-cssi-2025/)
+
 This repository organizes PolicyEngine's NSF CSSI (Cyberinfrastructure for Sustained Scientific Innovation) Elements proposal development. It provides a structured framework for developing a comprehensive proposal focused on creating scalable cyberinfrastructure for policy research and economic analysis.
 
 ## Program Overview
