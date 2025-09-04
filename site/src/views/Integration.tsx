@@ -69,45 +69,39 @@ result = pe.calculate_household(
           <div className="sdk-item">
             <h3>R Package</h3>
             <p>Native R integration with tidyverse compatibility</p>
-            <pre><code>
-library(policyengine)
+            <pre><code>{`library(policyengine)
 
 # Analyze policy reform
 analysis <- pe_calculate(
   households = household_df,
   baseline = "current_law",
   reform = "ubi_1000"
-)
-            </code></pre>
+)`}</code></pre>
           </div>
           
           <div className="sdk-item">
             <h3>Julia Package</h3>
             <p>High-performance numerical computing integration</p>
-            <pre><code>
-using PolicyEngine
+            <pre><code>{`using PolicyEngine
 
 # Large-scale simulation
 results = simulate_population(
     n_households=1_000_000,
     policy=current_law,
     parallel=true
-)
-            </code></pre>
+)`}</code></pre>
           </div>
           
           <div className="sdk-item">
             <h3>JavaScript/Node.js</h3>
             <p>Web application and visualization integration</p>
-            <pre><code>
-const pe = require('policyengine-api');
+            <pre><code>{`const pe = require('policyengine-api');
 
 // Web app integration
 const impact = await pe.calculateHousehold({
   household: householdData,
   policy: 'current_law'
-});
-            </code></pre>
+});`}</code></pre>
           </div>
         </div>
       </div>
