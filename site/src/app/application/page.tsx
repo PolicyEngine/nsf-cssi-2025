@@ -50,7 +50,7 @@ TO BE DEVELOPED - 4-year development timeline with specific deliverables.
 
 *Use the navigation links above to access individual sections and supporting materials.*`
 
-export const Application: React.FC = () => {
+const Application: React.FC = () => {
   return (
     <div className="content">
       <div className="application-content">
@@ -59,3 +59,4 @@ export const Application: React.FC = () => {
     </div>
   )
 }
+export default Application

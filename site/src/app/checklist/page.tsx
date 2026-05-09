@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Checklist: React.FC = () => {
+const Checklist: React.FC = () => {
   const sections = [
     { id: 'project_summary', title: 'Project Summary', status: 'draft' },
     { id: 'cyberinfrastructure_need', title: 'Cyberinfrastructure Need and Vision', status: 'outline' },
@@ -107,3 +107,4 @@ export const Checklist: React.FC = () => {
     </div>
   )
 }
+export default Checklist

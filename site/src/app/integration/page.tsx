@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Integration: React.FC = () => {
+const Integration: React.FC = () => {
   return (
     <div className="content">
       <h1>Integration and APIs</h1>
@@ -190,3 +190,4 @@ const impact = await pe.calculateHousehold({
     </div>
   )
 }
+export default Integration
