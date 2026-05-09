@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const References: React.FC = () => {
+const References: React.FC = () => {
   return (
     <div className="content">
       <h1>References</h1>
@@ -46,3 +46,4 @@ export const References: React.FC = () => {
     </div>
   )
 }
+export default References

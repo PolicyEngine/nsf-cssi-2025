@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Research: React.FC = () => {
+const Research: React.FC = () => {
   return (
     <div className="content">
       <h1>Research Enablement</h1>
@@ -74,3 +74,4 @@ export const Research: React.FC = () => {
     </div>
   )
 }
+export default Research

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Architecture: React.FC = () => {
+const Architecture: React.FC = () => {
   return (
     <div className="content">
       <h1>System Architecture</h1>
@@ -65,3 +65,4 @@ export const Architecture: React.FC = () => {
     </div>
   )
 }
+export default Architecture

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Budget: React.FC = () => {
+const Budget: React.FC = () => {
   return (
     <div className="content">
       <h1>CSSI Elements Budget</h1>
@@ -82,3 +82,4 @@ export const Budget: React.FC = () => {
     </div>
   )
 }
+export default Budget

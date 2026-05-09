@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Timeline: React.FC = () => {
+const Timeline: React.FC = () => {
   return (
     <div className="content">
       <h1>4-Year Development Timeline</h1>
@@ -140,3 +140,4 @@ export const Timeline: React.FC = () => {
     </div>
   )
 }
+export default Timeline

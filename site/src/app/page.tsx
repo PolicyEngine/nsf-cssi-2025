@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <div className="content">
       <h1>NSF CSSI Elements — PolicyEngine Cyberinfrastructure</h1>
@@ -97,3 +97,4 @@ export const Home: React.FC = () => {
     </div>
   )
 }
+export default Home

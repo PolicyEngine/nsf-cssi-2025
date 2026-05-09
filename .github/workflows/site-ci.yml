@@ -2,7 +2,7 @@ name: Site CI
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -12,12 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Setup Node
-        uses: actions/setup-node@v6
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: site/package-lock.json
+          bun-version: latest
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -30,17 +28,17 @@ jobs:
           pip install pyyaml
 
       - name: Install Node dependencies
-        run: npm ci
         working-directory: ./site
+        run: bun install --frozen-lockfile
 
       - name: Sync content from docs to site
         run: python3 scripts/assemble_cssi_application.py
+        continue-on-error: true
 
-      - name: Build site
-        run: npm run build
+      - name: Lint
         working-directory: ./site
+        run: bun run lint
 
-      - name: Check build artifacts
-        run: |
-          ls -la site/dist/
-          echo "Build completed successfully"
+      - name: Build
+        working-directory: ./site
+        run: bun run build

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Performance: React.FC = () => {
+const Performance: React.FC = () => {
   return (
     <div className="content">
       <h1>Performance Benchmarks</h1>
@@ -138,3 +138,4 @@ export const Performance: React.FC = () => {
     </div>
   )
 }
+export default Performance
