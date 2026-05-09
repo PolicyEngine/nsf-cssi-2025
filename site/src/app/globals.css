@@ -75,9 +75,11 @@ h3 {
   padding: 1rem 0;
 }
 
-.logo img {
-  height: 40px;
-  width: auto;
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
 .nav-links {
